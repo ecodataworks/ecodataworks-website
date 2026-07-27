@@ -1,0 +1,72 @@
+---
+// NOTE: If AstroWind's widget set includes a dedicated Team.astro widget,
+// prefer that over this hand-built grid — check src/components/widgets/
+// after cloning. This version uses plain markup so it works regardless.
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Image } from 'astro:assets';
+
+const metadata = {
+  title: 'Our Team',
+  description: 'Meet the consultants behind [Your Business Name].',
+};
+
+const consultants = [
+  {
+    name: 'Jordan Rivera',
+    role: 'Principal Consultant, Environmental Data Science',
+    bio: 'Jordan leads data pipeline design and statistical modeling for monitoring and impact-assessment projects. [Placeholder — replace with real credentials, degrees, years of experience, notable prior work.]',
+    credentials: ['Ph.D., Environmental Science [Placeholder]', 'GIS Certification [Placeholder]'],
+    image: '~/assets/images/consultant-1.jpg',
+  },
+  {
+    name: 'Sam Okafor',
+    role: 'Senior Consultant, Regulatory & Compliance',
+    bio: 'Sam manages client-facing regulatory reporting and compliance strategy. [Placeholder — replace with real credentials, background, and specialties.]',
+    credentials: ['M.S., Environmental Policy [Placeholder]', 'Former EPA analyst [Placeholder]'],
+    image: '~/assets/images/consultant-2.jpg',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+
+  <Hero tagline="Our Team">
+    <Fragment slot="title">The people behind the data</Fragment>
+    <Fragment slot="subtitle">
+      Two consultants, one shared focus: rigorous, decision-ready environmental data.
+    </Fragment>
+  </Hero>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid gap-12 sm:grid-cols-2">
+      {consultants.map((person) => (
+        <div class="text-center sm:text-left">
+          <Image
+            src={person.image}
+            alt={person.name}
+            width={320}
+            height={320}
+            class="mx-auto h-40 w-40 rounded-full object-cover sm:mx-0"
+          />
+          <h3 class="mt-6 text-xl font-bold">{person.name}</h3>
+          <p class="text-accent font-medium">{person.role}</p>
+          <p class="mt-3 text-muted">{person.bio}</p>
+          <ul class="mt-3 space-y-1 text-sm text-muted">
+            {person.credentials.map((c) => (
+              <li>• {c}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CallToAction
+    title="Want to work with us?"
+    subtitle="Reach out to discuss your project."
+    actions={[{ text: 'Contact Us', href: '/contact' }]}
+  />
+
+</Layout>
