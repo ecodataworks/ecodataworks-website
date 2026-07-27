@@ -1,0 +1,53 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Privacy Policy',
+  description: 'Privacy policy for [Your Business Name].',
+  robots: { index: false, follow: true },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold">Privacy Policy</h1>
+    <p class="mt-2 text-sm text-muted">Last updated: [Month Day, Year]</p>
+
+    <div class="prose mt-8 dark:prose-invert">
+      <p>
+        [Your Business Name] ("we," "us," or "our") provides environmental data
+        consulting services. This page describes what information we collect,
+        how we use it, and the choices you have. <strong>This is placeholder
+        text — replace it with policy language reviewed by a lawyer before
+        publishing</strong>, especially given that client environmental data
+        may be sensitive or regulated.
+      </p>
+
+      <h2>Information we collect</h2>
+      <ul>
+        <li>Contact details submitted through our contact form (name, email, message).</li>
+        <li>Analytics data about site usage (e.g. Google Analytics), if enabled.</li>
+        <li>Any project data you share with us directly as part of an engagement.</li>
+      </ul>
+
+      <h2>How we use information</h2>
+      <ul>
+        <li>To respond to inquiries and deliver consulting services.</li>
+        <li>To improve this website's content and performance.</li>
+        <li>We do not sell personal information to third parties.</li>
+      </ul>
+
+      <h2>Client project data</h2>
+      <p>
+        Data shared as part of a consulting engagement is governed by the terms
+        of the applicable engagement agreement and/or NDA, not solely by this
+        policy.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy can be sent to [contact@yourdomain.com].
+      </p>
+    </div>
+  </section>
+</Layout>
