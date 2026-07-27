@@ -1,0 +1,48 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'FAQ',
+  description: 'Frequently asked questions about our environmental data consulting services.',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero tagline="FAQ">
+    <Fragment slot="title">Frequently asked questions</Fragment>
+  </Hero>
+
+  <FAQs
+    columns={1}
+    items={[
+      {
+        title: 'What industries do you typically work with?',
+        description: 'Manufacturing, agriculture, municipal government, and land development clients, along with organizations preparing sustainability disclosures.',
+      },
+      {
+        title: 'Do you work with clients outside our region?',
+        description: 'Yes — most of our analysis and reporting work is remote. Site visits or field data collection can be scoped separately.',
+      },
+      {
+        title: 'How is a project typically priced?',
+        description: 'It depends on scope — one-off assessments are usually flat-fee, while ongoing monitoring is billed as a retainer. See our Pricing page for details.',
+      },
+      {
+        title: 'What data formats or sources can you work with?',
+        description: 'We regularly work with sensor/IoT data, remote sensing imagery, lab results, GIS shapefiles, and existing regulatory filings.',
+      },
+      {
+        title: 'Can you help with a specific regulatory filing?',
+        description: 'Yes, though we recommend a scoping call first to confirm the applicable requirements for your jurisdiction.',
+      },
+      {
+        title: 'Do you sign NDAs or handle confidential data?',
+        description: 'Yes — we routinely work under NDA and follow standard data handling practices for sensitive environmental and business data.',
+      },
+    ]}
+  />
+
+</Layout>
