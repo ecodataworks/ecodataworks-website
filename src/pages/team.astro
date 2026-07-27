@@ -6,6 +6,8 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Image } from 'astro:assets';
+import consultant1 from '~/assets/images/consultant-1.jpg';
+import consultant2 from '~/assets/images/consultant-2.jpg';
 
 const metadata = {
   title: 'Our Team',
@@ -14,18 +16,18 @@ const metadata = {
 
 const consultants = [
   {
-    name: 'Jordan Rivera',
-    role: 'Principal Consultant, Environmental Data Science',
-    bio: 'Jordan leads data pipeline design and statistical modeling for monitoring and impact-assessment projects. [Placeholder — replace with real credentials, degrees, years of experience, notable prior work.]',
+    name: 'Raissa Mendonca',
+    role: 'Co-Founder | Data Consultant',
+    bio: 'Raissa leads data pipeline design and statistical modeling for monitoring and impact-assessment projects. [Placeholder — replace with real credentials, degrees, years of experience, notable prior work.]',
     credentials: ['Ph.D., Environmental Science [Placeholder]', 'GIS Certification [Placeholder]'],
-    image: '~/assets/images/consultant-1.jpg',
+    image: consultant1,
   },
   {
-    name: 'Sam Okafor',
-    role: 'Senior Consultant, Regulatory & Compliance',
-    bio: 'Sam manages client-facing regulatory reporting and compliance strategy. [Placeholder — replace with real credentials, background, and specialties.]',
-    credentials: ['M.S., Environmental Policy [Placeholder]', 'Former EPA analyst [Placeholder]'],
-    image: '~/assets/images/consultant-2.jpg',
+    name: 'Colleen Cosgrove',
+    role: 'Co-Founder | Data Consultant',
+    bio: 'Colleen manages client-facing regulatory reporting and compliance strategy. [Placeholder — replace with real credentials, background, and specialties.]',
+    credentials: ['Ph.D., Environmental Policy [Placeholder]', 'Former EPA analyst [Placeholder]'],
+    image: consultant2,
   },
 ];
 ---

@@ -6,6 +6,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Image } from 'astro:assets';
+import project1 from '~/assets/images/project-1.jpg';
+import project2 from '~/assets/images/project-2.jpg';
+import project3 from '~/assets/images/project-3.jpg';
 
 const metadata = {
   title: 'Portfolio',
@@ -18,21 +21,21 @@ const projects = [
     client: 'Municipal Water Authority [Placeholder]',
     summary: 'Built a real-time dashboard tracking water quality metrics across 12 monitoring stations. [Placeholder — replace with real project summary, methods, and outcome.]',
     tags: ['Data Monitoring', 'Dashboards'],
-    image: '~/assets/images/project-1.jpg',
+    image: project1,
   },
   {
     title: 'Site Environmental Impact Assessment',
     client: 'Land Development Firm [Placeholder]',
     summary: 'Conducted a baseline environmental impact assessment ahead of permitting. [Placeholder — replace with real project summary, methods, and outcome.]',
     tags: ['Impact Assessment', 'Compliance'],
-    image: '~/assets/images/project-2.jpg',
+    image: project2,
   },
   {
     title: 'ESG Data Pipeline & Reporting',
     client: 'Mid-size Manufacturer [Placeholder]',
     summary: 'Designed an automated pipeline feeding annual sustainability disclosures. [Placeholder — replace with real project summary, methods, and outcome.]',
     tags: ['Sustainability', 'ESG Reporting'],
-    image: '~/assets/images/project-3.jpg',
+    image: project3,
   },
 ];
 ---
