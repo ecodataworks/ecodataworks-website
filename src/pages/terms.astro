@@ -1,0 +1,42 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Terms and Conditions',
+  description: 'Terms and conditions for EcoDataWorks.',
+  robots: { index: false, follow: true },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold">Terms and Conditions</h1>
+    <p class="mt-2 text-sm text-muted">Last updated: August 2026</p>
+
+    <div class="prose mt-8 dark:prose-invert">
+      <p>
+        These terms govern use of the EcoDataWorks website and engagement of EcoDataWorks
+        for consulting services. <strong>This is placeholder text. Replace it with terms
+        reviewed by a lawyer before publishing.</strong>
+      </p>
+
+      <h2>Consulting engagements</h2>
+      <p>
+        The scope, deliverables, timeline, and fees for any consulting engagement are governed
+        by a separate written agreement (proposal, statement of work, and/or contract) between
+        EcoDataWorks and the client, not solely by these website terms.
+      </p>
+
+      <h2>Website use</h2>
+      <p>
+        This website and its content are provided "as is" for informational purposes. We make
+        no warranty that the site will be uninterrupted or error-free.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about these terms can be sent to contact@ecodataworks.com.
+      </p>
+    </div>
+  </section>
+</Layout>

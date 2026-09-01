@@ -17,7 +17,14 @@ const { metadata } = Astro.props;
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <!--
+      RSS feed icon is off for now: the blog is disabled (apps.blog.isEnabled: false
+      in src/config.yaml), so /rss.xml currently 404s. When the blog goes live again,
+      flip that flag back to true and add `showRssFeed` back as a prop on the line
+      below (i.e. `<Header {...headerData} isSticky showRssFeed showToggleTheme />`)
+      to bring the icon back.
+    -->
+    <Header {...headerData} isSticky showToggleTheme />
   </slot>
   <main>
     <slot />

@@ -18,10 +18,23 @@ const consultants = [
   {
     name: 'Raissa Mendonca',
     role: 'Co-Founder | Data Consultant',
-    // TODO: Replace bio and credentials with real information about background, expertise, and experience.
-    bio: 'Raissa leads data pipeline design and statistical modeling for monitoring and impact-assessment projects. [Placeholder — replace with real credentials, degrees, years of experience, notable prior work.]',
-    credentials: ['Ph.D., Environmental Science [Placeholder]', 'GIS Certification [Placeholder]'],
+    bio: 'Raissa has extensive experience in environmental data management, data quality assessment, \
+          statistical analysis, and data visualization in R, Python, and off-the-shelf tools (e.g., ArcGIS Experience). \
+          Raissa has built a strong foundation in workflow design and implementation, including automated data \
+          harvesting, processing, and reporting, along with data stewardship practices \
+          (e.g., <a href="https://www.go-fair.org/fair-principles/" target="_blank" rel="noopener noreferrer" class="text-teal-700 dark:text-teal-400 underline">FAIR</a>, \
+          <a href="https://datascience.codata.org/articles/10.5334/dsj-2020-043" target="_blank" rel="noopener noreferrer" class="text-teal-700 dark:text-teal-400 underline">CARE</a>) and \
+          database design. She is also competent in developing agentic coding solutions (e.g., agents, skills). \
+          Raissa earned her PhD in Ecology from Kent State University in 2022 studying the \
+          effects of metals on freshwater ecosystems and currently works as the lead data manager for an \
+          environmental monitoring program. She is also a certified instructor with The Carpentries, \
+          where she teaches data science skills to researchers and professionals.',
+    credentials: [
+      'Ph.D., Ecology',
+      '<a href="https://carpentries.org/" target="_blank" rel="noopener noreferrer" class="text-teal-700 dark:text-teal-400 underline">The Carpentries</a> Certified Instructor',
+    ],
     image: consultant1,
+    bookingLink: 'https://calendar.app.google/2GZy4Ym5dXoSArV5A',
   },
   {
     name: 'Colleen Cosgrove',
@@ -36,6 +49,7 @@ const consultants = [
           collaboration with federal and state agencies' goals.",
     credentials: ['Ph.D., Ecology', 'Former post-doctoral researcher, National Center for Water Quality Research, Heidelberg University'],
     image: consultant2,
+    bookingLink: 'https://calendar.app.google/ufq5rB8LfCPkiPX5A',
   },
 ];
 ---
@@ -45,7 +59,6 @@ const consultants = [
   <Hero tagline="Our Team">
     <Fragment slot="title">The people behind the data</Fragment>
     <Fragment slot="subtitle">
-      <!-- TODO: Replace with a more compelling subtitle that highlights the team's expertise and mission. -->
       Two consultants, one shared focus: rigorous, decision-ready environmental data.
     </Fragment>
   </Hero>
@@ -63,12 +76,20 @@ const consultants = [
           />
           <h3 class="mt-6 text-xl font-bold">{person.name}</h3>
           <p class="text-accent font-medium">{person.role}</p>
-          <p class="mt-3 text-muted">{person.bio}</p>
+          <p class="mt-3 text-muted" set:html={person.bio} />
           <ul class="mt-3 space-y-1 text-sm text-muted">
             {person.credentials.map((c) => (
-              <li>• {c}</li>
+              <li>• <Fragment set:html={c} /></li>
             ))}
           </ul>
+          <a
+            href={person.bookingLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 inline-block text-sm font-semibold text-teal-700 hover:underline dark:text-teal-400"
+          >
+            Book a 30-minute call with {person.name.split(' ')[0]} →
+          </a>
         </div>
       ))}
     </div>

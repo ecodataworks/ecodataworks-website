@@ -16,8 +16,9 @@ const metadata = {
 
   <ContactUs
     id="form"
+    formName="contact"
     title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, please don't hesitate to reach out."
+    subtitle="For quicker answers, explore our FAQ section. You may find the answer you're looking for right there! If not, please don't hesitate to reach out."
     inputs={[
       {
         type: 'text',
@@ -43,21 +44,18 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="Other ways to reach us"
+    columns={2}
     items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
       {
         title: 'Email',
         description: 'contact@ecodataworks.com',
         icon: 'tabler:mail',
+      },
+      {
+        title: 'Response time',
+        description: 'We typically respond within 24-48 business hours.',
+        icon: 'tabler:clock',
       },
     ]}
   />
