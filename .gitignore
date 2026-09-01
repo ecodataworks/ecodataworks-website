@@ -30,3 +30,4 @@ yarn-error.log*
 pnpm-lock.yaml
 
 .astro
+CONTENT_MAP.html
