@@ -12,7 +12,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <Hero tagline="Services">
+  <Hero tagline="Services" compact>
     <Fragment slot="title">What we offer</Fragment>
     <Fragment slot="subtitle">
       Data-first environmental consulting, scoped to your project or ongoing operations.
@@ -21,6 +21,7 @@ const metadata = {
 
   <Features2
     columns={2}
+    classes={{ container: 'pt-6! md:pt-8! lg:pt-10! pb-12! md:pb-16! lg:pb-20!' }}
     items={[
       {
         title: 'Technical Documentation & Reporting',

@@ -15,7 +15,14 @@ const {
 
   id,
   bg = await Astro.slots.render('bg'),
+  compact = false,
 } = Astro.props;
+
+// `compact` halves the bottom whitespace below the subtitle/actions — opt in per-page
+// (via the `compact` prop) rather than changing the default, since most Hero usages
+// (e.g. the homepage) pair this spacing with an image below and shouldn't shrink.
+const outerPadding = compact ? 'pt-12 md:pt-20 pb-6 md:pb-10' : 'py-12 md:py-20';
+const textPadding = compact ? 'pb-5 md:pb-8' : 'pb-10 md:pb-16';
 ---
 
 <section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
@@ -26,8 +33,8 @@ const {
   </div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+    <div class:list={[outerPadding]}>
+      <div class:list={['text-center max-w-5xl mx-auto', textPadding]}>
         {
           tagline && (
             <p

@@ -11,12 +11,13 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <Hero tagline="FAQ">
+  <Hero tagline="FAQ" compact>
     <Fragment slot="title">Frequently asked questions</Fragment>
   </Hero>
 
   <FAQs
     columns={1}
+    classes={{ container: 'pt-6! md:pt-8! lg:pt-10! pb-12! md:pb-16! lg:pb-20!' }}
     items={[
       {
         title: 'What industries do you typically work with?',
